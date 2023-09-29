@@ -2,7 +2,14 @@
 
 ## Setup
 
-This project just uses vanilla HTML/CSS/JS so you can just open the `index.html` page in a browser to see the result.
+This project just uses vanilla HTML/CSS/JS so you can just clone the repo and open the `index.html` page in a browser to see the result.
+
+Instructions from the command line to open the page in your default browser:
+```
+$ git clone https://github.com/rbtnguyen/fe-take-home-notion.git
+$ cd fe-take-home-notion
+$ open index.html
+```
 
 Also put this code on codepen to make it easer to view. Link [here](https://codepen.io/rbtnguyen/full/LYMrvKg). I think the only difference between that and the source code is that the html links to the hero image from an external source.
 
