@@ -56,17 +56,18 @@ document.addEventListener('DOMContentLoaded', function(event) {
   // UNITID,INSTNM,CITY,STABBR,INSTURL
   function createUniversityBlock(universityData) {
     const fragment = new DocumentFragment();
+    //Create containing article element
     const block = document.createElement('article');
     block.classList.add('university-block')
-    
+    //Create location p tag
     const collegeLocation = document.createElement('p');
     collegeLocation.classList.add('university-location')
     collegeLocation.textContent = `${universityData.CITY} · ${universityData.STABBR}`;
-
+    //Create name p tag
     const collegeName = document.createElement('p');
     collegeName.classList.add('university-name')
     collegeName.textContent = universityData.INSTNM;
-
+    //Create link p tag and a tag
     const collegeLinkContainer = document.createElement('p');
     const collegeLink = document.createElement('a');
     collegeLinkContainer.classList.add('university-link-container');
@@ -75,10 +76,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
     collegeLink.href = `https://${universityData.INSTURL}`;
     // collegeLink.target = '_blank';
     collegeLinkContainer.append(collegeLink);
-
+    //Append elements to containing article element aka block
     [collegeLocation, collegeName, collegeLinkContainer].forEach((el) => {
       block.append(el);
     })
+    //Append block to document fragment and return
     fragment.append(block);
     return fragment;
   } 
@@ -86,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   function createUniversityBlocksSection(universitiesArray, sectionClassName) {
     const section = document.querySelector(sectionClassName);
     universitiesArray.forEach((entry, index) => {
+      //Append blocks to DOM
       const block = createUniversityBlock(entry);
       section.append(block);
     })
