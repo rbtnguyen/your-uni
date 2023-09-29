@@ -6,8 +6,8 @@ This project just uses vanilla HTML/CSS/JS so you can just clone the repo and op
 
 Instructions from the command line to open the page in your default browser:
 ```
-$ git clone https://github.com/rbtnguyen/fe-take-home-notion.git
-$ cd fe-take-home-notion
+$ git clone https://github.com/rbtnguyen/your-uni.git
+$ cd your-uni
 $ open index.html
 ```
 
