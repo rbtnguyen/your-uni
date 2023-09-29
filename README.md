@@ -2,7 +2,9 @@
 
 ## Setup
 
-This project is just uses vanilla JS so you can just open the `index.html` page to see the result.
+This project just uses vanilla HTML/CSS/JS so you can just open the `index.html` page in a browser to see the result.
+
+Also put this code on codepen to make it easer to view. Link [here](https://codepen.io/rbtnguyen/full/LYMrvKg). I think the only difference between that and the source code is that the html links to the hero image from an external source.
 
 ## Misc
 
