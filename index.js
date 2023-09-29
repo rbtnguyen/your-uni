@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     collegeLinkContainer.classList.add('university-link-container');
     collegeLink.classList.add('university-link');
     collegeLink.textContent = universityData.INSTURL;
-    collegeLink.href = `https://${universityData.INSTURL}`;
+    collegeLink.href = collegeLink.textContent.startsWith('https://') ? collegeLink.textContent : `https://${universityData.INSTURL}`;
     // collegeLink.target = '_blank';
     collegeLinkContainer.append(collegeLink);
     //Append elements to containing article element aka block
