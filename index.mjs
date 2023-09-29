@@ -5,9 +5,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   function setUpPage() {
     fetchData(source).then((data)=>{
-      console.log('data', data);
       const dataArray = convertCsvToArray(data);
-      console.log('dataArray',dataArray);
       createUniversityBlocksSection(dataArray, '.university-blocks-section')
     })
   }
