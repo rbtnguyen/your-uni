@@ -1,0 +1,239 @@
+:root {
+  --main-text-color: #000000;
+  --main-text-accent: #E16259;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-nav {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  /* Comment out max-width line below to make nav full width */
+  max-width: 1200px; 
+  padding: 0 12px;
+  justify-content: space-between;
+}
+
+.site-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.right-nav-item-container {
+  display: flex;
+  gap: 24px;
+  padding-left: 0;
+}
+
+.right-nav-item {
+  font-size: 17px;
+  list-style-type: none;
+}
+
+.right-nav-item a {
+  color: var(--main-text-color);
+  text-decoration: none;
+  text-underline-offset: 6px;
+}
+
+.right-nav-item a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--main-text-accent);
+  text-decoration-thickness: 2px;
+}
+
+.content-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  gap: 50px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 12px;
+  width: 100%;
+}
+
+.main-header {
+  display: flex;
+  gap: 48px;
+  justify-content: space-between;
+  margin: 48px 0;
+  width: 100%;
+}
+
+.main-header-left {
+  width: 100%;
+}
+
+.hero-title {
+  max-width: 24ch;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.hero-description {
+  font-size: 17px;
+  line-height: 1.45;
+  max-width: 48ch;
+}
+
+.main-header-right {
+  align-items: center;
+  /* display: flex; */
+  justify-content: center;
+  /* width: 50%; */
+  display: none;
+}
+
+.your-uni-hero-image {
+  border-radius: 50%;
+  display: none;
+}
+
+.search-container {
+  display: flex;
+  width: 100%;
+}
+
+.search-input {
+  border: 2px solid #EEEEEE;
+  font-size: 14px;
+  height: 44px;
+  padding-left: 16px;
+  width: 384px;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+
+.university-blocks-section {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: space-between;
+  max-width: 1200px;
+}
+
+.university-block {
+  border-radius: 4px;
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex: 1 1 250px;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+  padding: 16px;
+}
+
+.university-block.hidden {
+  display: none;
+}
+
+.university-location,
+.university-name,
+.university-link-container {
+  margin: 0;
+}
+
+.university-block {
+  margin: 0;
+}
+
+.university-location {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+}
+
+.university-name {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.university-link-container {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.university-link {
+  color: var(--main-text-accent);
+  font-size: 15px;
+  text-decoration: none;
+}
+
+footer {
+  align-items: center;
+  display: flex;
+  margin: 96px auto 0;
+  /* Comment out max-width line below to make nav full width */
+  max-width: 1200px; 
+  padding: 0 12px;
+  justify-content: space-between;
+}
+
+/* Some Quick Responsive Styling */
+@media screen and (min-width: 480px) {
+
+  .main-nav,
+  .content-container,
+  footer {
+    padding: 0 48px;
+  }
+
+  .main-nav {
+    align-items: center;
+    flex-direction: row;
+
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-title {
+    font-size: 48px;
+    text-align: left;
+  }
+
+  .hero-description {
+    font-size: 20px;
+    line-height: 1.45;
+  }
+
+  .main-header-left {
+    width: 50%;
+  }
+  .main-header-right {
+    display: flex;
+    width: 50%;
+  }
+
+  .your-uni-hero-image {
+    display: inline;
+    height: 250px;
+    width: 250px;
+  }
+  .university-block {
+    max-width: 400px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-title {
+    max-width: 15ch;
+    font-size: 69px;
+    font-weight: bold;
+  }
+
+  .your-uni-hero-image {
+    border-radius: 50%;
+    height: 384px;
+    width: 384px;
+  }
+}
