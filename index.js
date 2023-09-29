@@ -20,13 +20,12 @@ document.addEventListener('DOMContentLoaded', function(event) {
     }  
   }
 
-  //convert csv to array of objects with key, value
+  //convert csv to array of objects with headings as key with values
   function convertCsvToArray(csv) {
-    const lines = csv.split('\n');
+    const lines = csv.split("\n");
     let array = [];
     const keys = lines[0].split(',');
-
-    for (let i = 1; lines.length; i++) {
+    for (let i = 1; i < lines.length; i++) {
       let obj = {};
       let entry = lines[i].split(',');
       for (let j = 0; j < keys.length; j++) {
@@ -34,23 +33,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
       }
       array.push(obj)
     }
-    return result;
-  }
-
-  //convert csv to array of objects with key, value
-  function convertCsvToArray(csv){
-    const lines = csv.split("\n");
-    let result = [];
-    const headers = lines[0].split(",");
-    for(let i = 1; i < lines.length; i++){
-      let obj = {};
-      let currentline = lines[i].split(",");
-      for(let j = 0; j < headers.length; j++){
-        obj[headers[j]] = currentline[j];
-      }
-      result.push(obj);
-    }
-    return result;
+    return array;
   }
 
   // UNITID,INSTNM,CITY,STABBR,INSTURL
@@ -96,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 });
 
-//Vary rough university filter and hide/show function
+//Very rough university filter and hide/show function
 function filterSchools(event) {
   const allUniversityNames = document.querySelectorAll('.university-name');
   const searchValue = event.target.value;
